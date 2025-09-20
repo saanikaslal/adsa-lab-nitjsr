@@ -15,13 +15,11 @@ void insertionsort(int a[], int n) {
     for (int i = 1; i < n; i++) {   // first element at a[0] considered sorted
         int key = a[i];
         int j = i - 1;
-
         // Move elements greater than key to one position ahead
         while (j >= 0 && a[j] > key) {
             a[j + 1] = a[j];
             j--;
         }
-
         // Insert the key at correct position
         a[j + 1] = key;
     }

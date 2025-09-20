@@ -39,7 +39,6 @@ struct Node* createNode(int data) {
     return newNode;
 }
 
-// Iterative Preorder Traversal
 void preorderTraversal(struct Node* root) {
     if (root == NULL) return;
 
@@ -49,7 +48,7 @@ void preorderTraversal(struct Node* root) {
         struct Node* current = pop();
         printf("%d ", current->data);
 
-        // Push right child first so left is processed first
+
         if (current->right) push(current->right);
         if (current->left) push(current->left);
     }
